@@ -1,6 +1,5 @@
 stackbitVersion: ~0.3.0
 ssgName: gatsby
-ssgVersion: 2.3.30
 buildCommand: gatsby build
 publishDir: public
 staticDir: static
@@ -23,6 +22,8 @@ pageData:
       - '[0].fields.sections.items[1].fields.features'
       - '[1]'
       - '[1].fields.palette'
+cmsName: git
+nodeVersion: 12
 models:
   config:
     type: config
@@ -158,12 +159,16 @@ models:
     fields:
       - type: string
         name: first_name
+        label: First Name
       - type: string
         name: last_name
+        label: Last Name
       - type: markdown
         name: bio
+        label: Bio
       - type: image
         name: photo
+        label: Photo
   landing:
     type: page
     label: Landing Page
@@ -209,7 +214,8 @@ models:
     type: page
     label: Page
     layout: page
-    exclude: blog/**
+    exclude:
+      - blog/**
     fields:
       - type: string
         name: title
@@ -248,6 +254,7 @@ models:
         description: Post author
         models:
           - person
+        label: Author
       - type: markdown
         name: excerpt
         label: Excerpt
@@ -278,9 +285,17 @@ models:
   section_content:
     type: object
     label: Content Section
-    extends:
-      - section
     fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the section
+      - type: string
+        name: section_id
+        label: Element ID
+        description: >-
+          Element ID can be used in links to scroll the page to this section
+          when link clicked
       - type: markdown
         name: content
         label: Content
@@ -304,12 +319,21 @@ models:
           type: model
           models:
             - action
+    labelField: title
   section_cta:
     type: object
     label: Call to Action Section
-    extends:
-      - section
     fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the section
+      - type: string
+        name: section_id
+        label: Element ID
+        description: >-
+          Element ID can be used in links to scroll the page to this section
+          when link clicked
       - type: string
         name: subtitle
         label: Subtitle
@@ -321,12 +345,21 @@ models:
           type: model
           models:
             - action
+    labelField: title
   section_faq:
     type: object
     label: FAQ Section
-    extends:
-      - section
     fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the section
+      - type: string
+        name: section_id
+        label: Element ID
+        description: >-
+          Element ID can be used in links to scroll the page to this section
+          when link clicked
       - type: string
         name: subtitle
         label: Subtitle
@@ -346,6 +379,7 @@ models:
           type: model
           models:
             - faq_item
+    labelField: title
   faq_item:
     type: object
     label: FAQ Item
@@ -359,9 +393,17 @@ models:
   section_features:
     type: object
     label: Features Section
-    extends:
-      - section
     fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the section
+      - type: string
+        name: section_id
+        label: Element ID
+        description: >-
+          Element ID can be used in links to scroll the page to this section
+          when link clicked
       - type: string
         name: subtitle
         label: Subtitle
@@ -381,6 +423,7 @@ models:
           type: model
           models:
             - feature_item
+    labelField: title
   feature_item:
     type: object
     label: Feature Item
@@ -407,9 +450,17 @@ models:
   section_hero:
     type: object
     label: Hero Section
-    extends:
-      - section
     fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the section
+      - type: string
+        name: section_id
+        label: Element ID
+        description: >-
+          Element ID can be used in links to scroll the page to this section
+          when link clicked
       - type: markdown
         name: content
         label: Content
@@ -425,12 +476,21 @@ models:
           type: model
           models:
             - action
+    labelField: title
   section_posts:
     type: object
     label: Posts List
-    extends:
-      - section
     fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the section
+      - type: string
+        name: section_id
+        label: Element ID
+        description: >-
+          Element ID can be used in links to scroll the page to this section
+          when link clicked
       - type: string
         name: subtitle
         label: Subtitle
@@ -443,12 +503,21 @@ models:
           - gray
           - white
         default: gray
+    labelField: title
   section_pricing:
     type: object
     label: Pricing Section
-    extends:
-      - section
     fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the section
+      - type: string
+        name: section_id
+        label: Element ID
+        description: >-
+          Element ID can be used in links to scroll the page to this section
+          when link clicked
       - type: string
         name: subtitle
         label: Subtitle
@@ -468,6 +537,7 @@ models:
           type: model
           models:
             - pricing_plan
+    labelField: title
   pricing_plan:
     type: object
     label: Pricing Plan
@@ -500,9 +570,17 @@ models:
   section_reviews:
     type: object
     label: Reviews Section
-    extends:
-      - section
     fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the section
+      - type: string
+        name: section_id
+        label: Element ID
+        description: >-
+          Element ID can be used in links to scroll the page to this section
+          when link clicked
       - type: string
         name: subtitle
         label: Subtitle
@@ -522,6 +600,7 @@ models:
           type: model
           models:
             - review_item
+    labelField: title
   review_item:
     type: object
     label: Review Item
@@ -539,9 +618,17 @@ models:
   section_contact:
     type: object
     label: Contact Section
-    extends:
-      - section
     fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the section
+      - type: string
+        name: section_id
+        label: Element ID
+        description: >-
+          Element ID can be used in links to scroll the page to this section
+          when link clicked
       - type: string
         name: subtitle
         label: Subtitle
@@ -558,6 +645,7 @@ models:
           - gray
           - white
         default: gray
+    labelField: title
   action:
     type: object
     label: Action
