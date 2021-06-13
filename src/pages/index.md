@@ -3,7 +3,7 @@ title: TQIG
 sections:
   - section_id: hero
     type: section_hero
-    title: Texas Quantitative Investment Group
+    title: Texas Hedge Fund Club
     content: >-
       Our mission is to educate, learn, and apply a balance of theoretical and
       practical knowledge in the fields of Finance, Computer Science, and
