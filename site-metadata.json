@@ -1,0 +1,62 @@
+{
+    "palette": "orange",
+    "header": {
+        "title": "TQIG",
+        "logo_img": "images/TQIGDark.svg",
+        "has_nav": true,
+        "nav_links": [
+            {
+                "label": "About",
+                "url": "#mission"
+            },
+            {
+                "label": "Contact",
+                "url": "/#contact"
+            },
+            {
+                "label": "Team",
+                "url": "/team",
+                "primary": false,
+                "new_window": false,
+                "type": "action"
+            },
+            {
+                "label": "Apply",
+                "url": "https://docs.google.com/document/d/14HP6GbYRD5IFyZ28Ys-CVJAiIdWGOLkTx64ybhI5ifM/edit?usp=sharing",
+                "primary": true
+            }
+        ]
+    },
+    "footer": {
+        "logo_img": "images/panoramic-whale.svg",
+        "tagline": "Texas Quantitative Investment Group",
+        "has_nav": false,
+        "nav_title": "Company",
+        "nav_links": [],
+        "has_social": true,
+        "social_title": "Community",
+        "social_links": [
+            {
+                "label": "Twitter",
+                "url": "https://twitter.com/",
+                "new_window": true
+            },
+            {
+                "label": "Instagram",
+                "url": "https://www.instagram.com/",
+                "new_window": true
+            },
+            {
+                "label": "LinkedIn",
+                "url": "https://www.linkedin.com/",
+                "new_window": true
+            }
+        ],
+        "has_subscribe": true,
+        "subscribe_title": "Subscribe",
+        "subscribe_content": "Stay up to date with our latest developments.",
+        "content": "&copy; TQIG. All rights reserved.",
+        "links": []
+    },
+    "title": "Home"
+}
